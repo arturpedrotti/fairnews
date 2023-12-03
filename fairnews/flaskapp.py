@@ -28,10 +28,19 @@ def get_news_data(search_term):
         print(f"Error fetching news data: {e}")
         return pd.DataFrame()
 
+def sentiment_to_color(sentiment):
+    return {
+        'positive': 'green',
+        'negative': 'red',
+        'neutral': 'grey'
+    }.get(sentiment.lower(), 'black')  # Lowercase for consistency
+
 def add_sentiment_analysis(df):
     try:
         df['sentiment'] = df['title'].apply(lambda x: sentiment_pipeline(x)[0]['label'])
         df['sentiment_score'] = df['title'].apply(lambda x: sentiment_pipeline(x)[0]['score'])
+        df['sentiment_color'] = df['sentiment'].apply(sentiment_to_color)
+        print(df['sentiment'])
         return df
     except Exception as e:
         print(f"Error in sentiment analysis: {e}")
@@ -54,10 +63,13 @@ def create_wordcloud(text):
 
 def create_interactive_sentiment_graph(df):
     if 'sentiment_score' in df and 'media' in df and 'sentiment' in df:
-        fig = px.scatter(df, x='sentiment_score', y='media', color='sentiment', hover_data=['title'])
+        color_mapping = {'positive': 'green', 'negative': 'red', 'neutral': 'grey'}
+        fig = px.scatter(df, x='sentiment_score', y='media', color='sentiment',
+                         color_discrete_map=color_mapping, hover_data=['title'])
         return fig.to_html(full_html=False)
     else:
         return "<p>Graph cannot be generated due to missing data.</p>"
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

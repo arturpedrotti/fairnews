@@ -67,7 +67,7 @@
         {% if news_data %}
             <div>
                 {% for news in news_data %}
-                    <p>{{ news.title }} - Sentimento: {{ news.sentiment }} - Fonte: {{ news.media }}</p>
+		<p>{{ news.title }} - Sentimento: <span style="color: {{ news.sentiment_color }}">{{ news.sentiment }}</span> - Fonte: {{ news.media }}</p>
                 {% endfor %}
             </div>
             {% if wordcloud_image %}
