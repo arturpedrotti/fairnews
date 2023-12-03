@@ -43,7 +43,7 @@ Para contribuir com o projeto, siga estes passos:
 
 ## Licença 📄
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE.txt](LICENSE.txt) para mais detalhes.
+Este projeto está sob a licença MIT. 
 
 ---
 
