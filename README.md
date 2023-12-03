@@ -1,6 +1,6 @@
 # Fair News 🌍
 
-![Logo Fair News](static/img/Logo-fairnews.png)
+![Logo Fair News](fairnews/static/img/Logo-fairnews.png)
 
 ## Sobre o Projeto 📰
 
