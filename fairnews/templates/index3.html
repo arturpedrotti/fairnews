@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... your existing head content ... -->
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="search_term">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+
+    {% if news_data %}
+        <div>
+            {% for news in news_data %}
+                <p>{{ news.title }} - Sentimento: {{ news.sentiment }} - Fonte: {{ news.media }}</p>
+            {% endfor %}
+        </div>
+        {% if wordcloud_image %}
+            <div class="wordcloud">
+                <img src="data:image/png;base64,{{ wordcloud_image }}" alt="Word Cloud">
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2023 Fair News. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ... your existing scripts ... -->
+</body>
+</html>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

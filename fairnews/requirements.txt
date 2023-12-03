@@ -1,0 +1,8 @@
+streamlit
+pandas
+GoogleNews
+wordcloud
+matplotlib
+nltk
+transformers
+altair
