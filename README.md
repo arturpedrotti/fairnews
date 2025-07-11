@@ -1,50 +1,50 @@
-# Fair News 🌍
+# 🌍 Fair News
 
-![Logo Fair News](fairnews/static/img/Logo-fairnews.png)
+Fair News is a Flask web application that analyzes the sentiment of news articles and presents the results in a visually interactive way. It generates word clouds from news headlines and plots the sentiment (positive, neutral, or negative) using dynamic graphs.
 
-## Sobre o Projeto 📰
-
-Fair News é uma aplicação web desenvolvida em Flask, desenhada para analisar sentimentos de notícias e apresentar os resultados de forma interativa e informativa. Esta aplicação é capaz de gerar um _wordcloud_ das notícias pesquisadas, além de um gráfico interativo que representa o sentimento (positivo, negativo ou neutro) de cada notícia. Acesse o site em: [fairnews.xyz](http://fairnews.xyz).
-
-### Funcionalidades 🛠️
-
-- **Pesquisa de Notícias**: Permite que os usuários pesquisem notícias por palavras-chave.
-- **Análise de Sentimento**: Analisa o sentimento de cada notícia e o categoriza como positivo, negativo ou neutro.
-- **Wordcloud**: Gera uma nuvem de palavras a partir dos títulos das notícias, destacando os termos mais frequentes.
-- **Gráfico Interativo**: Exibe um gráfico de dispersão dos sentimentos das notícias, permitindo interação para detalhes adicionais.
-
-### Tecnologias Utilizadas 💻
-
-- **Flask**: Framework web utilizado para construir a aplicação.
-- **HTML/CSS**: Para estruturar e estilizar a página web.
-- **JavaScript**: Para adicionar interatividade à página.
-- **Python**: Linguagem principal para backend, análise de dados e geração de gráficos.
-
-### Autores 👥
-
-- Artur Grochau
-- Anna Clara
-- Anna Beatriz
-- Bruna Verissimo Mendes
-
-### Professor Auxiliar 📘
-
-- Matheus Pestana
-
-## Como Contribuir 🤝
-
-Para contribuir com o projeto, siga estes passos:
-
-1. Faça um _fork_ do projeto.
-2. Crie uma _branch_ para sua feature (`git checkout -b feature/NovaFeature`).
-3. Faça suas alterações e _commit_ (`git commit -am 'Adicionando uma nova feature'`).
-4. Faça _push_ para a _branch_ (`git push origin feature/NovaFeature`).
-5. Abra um _pull request_.
-
-## Licença 📄
-
-Este projeto está sob a licença MIT. 
+![Logo](static/img/Logo-fairnews.png)
 
 ---
 
-Feito com ❤️ pela equipe Fair News.
+## 🚀 Features
+
+- 🔍 **Search News**: Search articles by keyword using GoogleNews.
+- 💬 **Sentiment Analysis**: Classifies news as Positive, Neutral, or Negative using `transformers`.
+- ☁️ **Word Cloud**: Displays a word cloud from the news titles.
+- 📊 **Interactive Visualization**: Displays a sentiment scatterplot (via Plotly).
+
+---
+
+## 🛠 Tech Stack
+
+- **Flask**
+- **Pandas**
+- **GoogleNews**
+- **NLTK**
+- **Transformers (HuggingFace)**
+- **Matplotlib**, **Plotly**, **WordCloud**
+- **HTML/CSS/JS**
+
+---
+
+## 🧪 Installation
+
+```bash
+git clone https://github.com/arturpedrotti/fairnews.git
+cd fairnews
+pip install -r requirements.txt
+python3 app.py
+```
+
+---
+
+## 👨‍💻 Author
+
+Developed entirely by [Artur Pedrotti](https://github.com/arturpedrotti)  
+Academic project under guidance of [Matheus Pestana](https://github.com/mateuspestana)
+
+---
+
+## 📝 License
+
+MIT License. See [LICENSE.txt](LICENSE.txt) for details.
